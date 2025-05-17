@@ -1,0 +1,127 @@
+/* 全局变量 */
+:root {
+  --primary: #25e0e6;
+  --secondary: #2b6cb0;
+  --accent: #63b3ed;
+  --white: #fff;
+  --text: #2d3748;
+  --bg-light: #cffffa;
+  --radius: 0.375rem;
+  --shadow-sm: 0 1px 3px rgba(0,0,0,0.1);
+  --shadow-md: 0 4px 6px rgba(0,0,0,0.1);
+  --trans: all 0.2s ease;
+}
+
+/* 全局样式 */
+body {
+  background: linear-gradient(135deg, var(--white) 0%, var(--primary) 120%);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* 通用样式类 */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.2rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn {
+  border-radius: var(--radius);
+  padding: 0.75rem 1.5rem;
+  cursor: pointer;
+  border: none;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+  color: var(--white);
+  font-weight: 500;
+  transition: var(--trans);
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btn-small {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid rgba(37,224,230,0.3);
+  border-radius: var(--radius);
+  transition: var(--trans);
+  background: var(--white);
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(37,224,230,0.2);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.badge {
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.error {
+  color: #e53e3e;
+  padding: 0.75rem;
+  background: #fff5f5;
+  border-radius: var(--radius);
+  margin-bottom: 1rem;
+}
+
+.status {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text);
+}
+
+.status.error {
+  color: #e53e3e;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 0.5rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+  }
+}

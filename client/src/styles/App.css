@@ -1,0 +1,81 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app--with-bg {
+  background: url('/forest.jpg') center/cover fixed;
+}
+
+.header {
+  background: linear-gradient(135deg, var(--secondary) 0%, var(--primary) 100%);
+  box-shadow: var(--shadow-md);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.3rem;
+  min-height: 50px;
+}
+
+.header__auth {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: var(--white);
+  font-weight: 500;
+  margin-left: auto;
+}
+
+.header__icon {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.main {
+  flex: 1;
+  padding: 0 2rem;
+}
+
+.welcome {
+  max-width: 75rem;
+  margin: 8rem auto;
+  text-align: center;
+}
+
+.welcome__title {
+  font-size: 7rem;
+  font-family: 'Righteous', cursive;
+  color: var(--primary);
+  margin: 7rem 0;
+  animation: titleFloat 3s ease-in-out infinite;
+}
+
+.welcome__text {
+  font-size: 2rem;
+  color: var(--primary);
+  margin: 2rem 0;
+}
+
+@keyframes titleFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 0 1rem;
+  }
+  
+  .main {
+    padding: 0 1rem;
+  }
+  
+  .welcome__title {
+    font-size: 3rem;
+  }
+  
+  .welcome__text {
+    font-size: 1.5rem;
+  }
+}

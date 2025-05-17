@@ -1,0 +1,300 @@
+/* 基础容器 */
+.detail {
+  max-width: 900px;
+  min-height: 470px;
+  padding: 2rem;
+  margin: 2rem auto;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 头部容器 */
+.header-container {
+  margin-bottom: 12px;
+}
+
+.title-section {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.title-section h2 {
+  margin: 0;
+  font-size: 20px;
+  white-space: nowrap;
+}
+
+.title-section .description {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.info-bar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  padding: 12px;
+}
+
+.info-bar span {
+  font-size: 14px;
+}
+
+.vote-time {
+  margin-left: auto;
+}
+
+/* 投票信息容器 */
+.vote-info-container {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 20px;
+}
+
+.vote-info-left {
+  flex: 1;
+}
+
+.vote-info-left h2 {
+  margin: 0 0 12px 0;
+}
+
+.vote-info-left .description {
+  margin: 0;
+}
+
+.vote-info-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 16px;
+}
+
+/* 文本样式 */
+.description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin: 1rem 0;
+  color: var(--text);
+}
+
+/* 元信息 */
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 1rem 0;
+}
+
+.badge {
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  display: inline-block;
+}
+
+/* 用户状态样式 */
+.user-status {
+  display: inline-block;
+  padding: 0.4rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: white;
+}
+
+.status-unsigned {
+  background: #ff9800;
+}
+
+.status-signed {
+  background: #4CAF50;
+}
+
+.status-voted {
+  background: #2196F3;
+}
+
+/* 时间信息 */
+.time-info {
+  background: var(--bg-light);
+  padding: 1.2rem;
+  border-radius: var(--radius);
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.time-info div {
+  margin-bottom: 4px;
+}
+
+/* 报名区域 */
+.signup {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: var(--radius);
+}
+
+.signup .btn {
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1rem;
+}
+.vote-form .btn {
+  font-size: 1.1rem;
+  padding: 0.8rem 2rem;
+  margin-bottom: 1rem;
+}
+
+.signup .btn:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.signup p {
+  color: var(--text);
+  opacity: 0.8;
+  margin-top: 0.8rem;
+}
+
+.signup .info {
+  color: var(--primary);
+  font-weight: 500;
+}
+
+/* 投票表单 */
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin: 1.5rem 0;
+}
+
+.option {
+  background: var(--bg-light);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  cursor: pointer;
+  transition: var(--trans);
+}
+
+.option:hover {
+  background: rgba(37, 224, 230, 0.1);
+}
+
+.option.selected {
+  background: var(--primary);
+  color: var(--white);
+}
+
+/* 结果展示 */
+.results {
+  margin: 2rem 0;
+}
+
+.result-item {
+  background: var(--bg-light);
+  padding: 1rem 1.5rem;
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+}
+
+.result-text {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 0.5rem;
+}
+
+.result-count {
+  color: var(--secondary);
+  font-size: 0.9rem;
+  position: relative;
+  z-index: 1;
+}
+
+.result-bar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  background: rgba(37, 224, 230, 0.1);
+  transition: width 0.3s ease;
+}
+
+/* 状态展示 */
+.status {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text);
+}
+
+.status.error {
+  color: #e53e3e;
+}
+
+/* 状态信息样式 */
+.status-info {
+  text-align: center;
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: var(--bg-light);
+  border-radius: var(--radius);
+}
+
+.status-info.warning {
+  background: #fff3e0;
+  border: 1px solid #ffb74d;
+}
+
+.status-info.warning p {
+  color: #f57c00;
+}
+
+.status-info p {
+  color: var(--primary);
+  font-weight: 500;
+  margin: 0;
+}
+
+/* 投票状态样式 */
+.phase-Registration {
+  background: #4CAF50 !important;
+  color: white;
+  font-weight: 500;
+}
+
+.phase-Voting {
+  background: #2196F3 !important;
+  color: white;
+  font-weight: 500;
+}
+
+.phase-Ended {
+  background: #9E9E9E !important;
+  color: white;
+  font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .detail {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.8rem;
+  }
+}

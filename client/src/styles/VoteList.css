@@ -1,0 +1,85 @@
+.vote-list {
+  /* max-width: 1000px; */
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.vote-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+}
+
+/* 统一所有投票卡片的基础样式 */
+.vote-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+  transition: var(--trans);
+  height: 120px; /* 统一高度 */
+  width: 220px;
+}
+
+.vote-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+.vote-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+.vote-dates {
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* 投票状态边框 */
+.BEFORE_REGISTRATION { border-left: 4px solid #ffd700; }
+.REGISTRATION { border-left: 4px solid #4caf50; }
+.VOTING { border-left: 4px solid var(--primary); }
+.ENDED { border-left: 4px solid #9e9e9e; }
+
+/* 新建投票卡片的特殊样式 */
+.vote-card.new {
+  background: linear-gradient(135deg, var(--bg-light), var(--white));
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* 新建投票卡片悬停效果 */
+.vote-card.new:hover .plus {
+  transform: scale(1.1);
+}
+
+.plus {
+  font-size: 3rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+  transition: var(--trans);
+}
+
+@media (max-width: 768px) {
+  .vote-grid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+    gap: 1rem;
+  }
+  
+  /* 在移动端保持卡片合理高度 */
+  .vote-card {
+    height: auto;
+    min-height: 120px;
+  }
+}
