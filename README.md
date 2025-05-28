@@ -6,7 +6,7 @@ VoteX 是一个使用零知识证明技术的区块链投票系统，通过智�
 
 - 前端: React + TypeScript + Vite
 - 智能合约: Solidity
-- 区块链: Ethereum
+- 区块链: Ethereum (Ganache测试网络)
 - 零知识证明: 结合Pederson承诺的非交互式双基点Schnorr协议零知识证明
 - Web3交互: ethers.js
 
@@ -37,38 +37,35 @@ VoteX/
 
 ## 快速开始
 
-1. 安装依赖
-```bash
-# 安装智能合约依赖
-npm install
+### 环境准备
+1. 安装并启动 Ganache，确保其运行在 `127.0.0.1:7545` 端口
+2. 安装 MetaMask 浏览器扩展，并将其连接到 Ganache 本地网络
 
-# 安装前端依赖
-cd client
-pnpm install
+### 安装和部署
+1. 安装前端依赖并启动项目
+```bash
+# 一键部署和启动（包含合约部署、创建测试投票和启动前端）
+node deploy.js
 ```
 
-2. 部署合约
-```bash
-truffle migrate --network <network_name>
-```
-
-3. 启动前端应用
-```bash
-cd client
-pnpm dev
-```
+部署脚本会自动完成以下操作：
+- 部署智能合约到本地 Ganache 网络
+- 更新前端配置文件
+- 创建测试投票并完成初始化
+- 启动前端开发服务器
 
 ## 开发指南
 
 ### 智能合约开发
 - 合约位于 `contracts/` 目录
-- 使用 Truffle 进行开发和测试
-- 运行测试: `truffle test`
+- 使用 Truffle 进行开发和部署
+- 默认连接到 Ganache 本地网络 (http://127.0.0.1:7545)
 
 ### 前端开发
 - 使用 React + TypeScript
 - Vite 作为构建工具
 - Web3 交互使用 ethers.js
+- MetaMask 作为用户钱包
 
 ## 贡献指南
 
