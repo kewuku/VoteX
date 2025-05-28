@@ -17,4 +17,4 @@ export const VOTE_STATUS_LABELS: Record<VoteStatus, string> = {
 export const MIN_VOTE_DURATION_HOURS = 1; // 最小投票持续时间1小时
 
 // 投票合约地址
-export const CONTRACT_ADDRESS = '0x00E3686f1b8AaF3647Be609c952fd9Bf4515CF65';
+export const CONTRACT_ADDRESS = '0x153b56D777F86F0Ea2deA06b81A81D84097edDdA';

@@ -84,15 +84,6 @@ export class ECUtils {
             xCubed = (xCubed * x) % this.P;
             const right = (xCubed + this.B) % this.P;
             
-            // 打印验证结果
-            console.log('曲线方程验证:', {
-                x: '0x' + x.toString(16),
-                y: '0x' + y.toString(16),
-                'y²': '0x' + ySquared.toString(16),
-                'x³ + 3': '0x' + right.toString(16),
-                isValid: ySquared === right
-            });
-            
             return ySquared === right;
         } catch (error) {
             console.error('验证点在曲线上时出错:', error);

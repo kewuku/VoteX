@@ -7,7 +7,7 @@ VoteX 是一个使用零知识证明技术的区块链投票系统，通过智�
 - 前端: React + TypeScript + Vite
 - 智能合约: Solidity
 - 区块链: Ethereum
-- 零知识证明: ZK-SNARK
+- 零知识证明: 结合Pederson承诺的非交互式双基点Schnorr协议零知识证明
 - Web3交互: ethers.js
 
 ## 功能特性
